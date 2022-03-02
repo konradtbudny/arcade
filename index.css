@@ -21,7 +21,7 @@ body{
     border-style: solid;
     border-width: .05rem;
     align-items: center;
-    justify-content: center;
+    justify-content: center;    
 }
 .cell:nth-child(3n+1){
     border-left: none;
