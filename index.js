@@ -10,16 +10,19 @@
 
  function markCell(){
     if(counter%2==0&&this.textContent==""){
-    this.textContent="X";
+        this.textContent="X";
+        this.style.backgroundColor="red";
     }
     if(counter%2==1&&this.textContent=="")
     {
         this.textContent="O";
+        this.style.backgroundColor="green";
     }
     counter++;
 }
 function updateResult(x,y){
-    scoreBoard.textContent="Player X: "+playerXResult+"  Player O: "+playerOResult;
+    scoreBoard.textContent="Player 1: "+playerXResult+"  Player 2: "+playerOResult;
+    document.getElementById('board').backgroundColor="aqua";
 }
 function checkGameProgress(){
     if((test[0].textContent=="X"&&test[1].textContent=="X"&&test[2].textContent=="X")||(test[3].textContent=="X"&&test[4].textContent=="X"&&test[5].textContent=="X")||
@@ -48,6 +51,7 @@ function checkGameProgress(){
 function clearBoard(){
     for(let i=0;i<test.length;i++){
         test[i].textContent="";
+        test[i].style.backgroundColor="aqua";
         counter=0;
     }
 }
